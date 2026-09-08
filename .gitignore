@@ -1,0 +1,44 @@
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*.so
+
+# Data — too large for Git, and often licence-restricted
+data/raw/*
+data/processed/*
+data/eval/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/eval/.gitkeep
+
+# Model weights and caches
+*.bin
+*.safetensors
+*.pt
+*.pth
+models/
+.cache/
+
+# Experiment outputs — keep the folder, ignore bulky artifacts
+results/*.log
+results/**/*.npy
+results/**/*.pkl
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Secrets — API keys must NEVER be committed
+.env
+*.key
+secrets.json
+
+# IDE and OS noise
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
