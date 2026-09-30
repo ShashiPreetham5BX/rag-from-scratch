@@ -4,7 +4,7 @@ A modular Retrieval-Augmented Generation system built from primitives —
 implementing document processing, chunking, embeddings, vector search,
 sparse retrieval, reranking, and evaluation without high-level RAG frameworks.
 
-**Status:** In development (Phase 1 — environment setup)
+**Status:** In development (Phases 1–6 in progress: loading, cleaning, tokenization, chunking)
 
 ## Motivation
 
