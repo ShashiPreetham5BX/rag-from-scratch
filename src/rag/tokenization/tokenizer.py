@@ -44,7 +44,19 @@ class Tokenizer:
     def count(self, text: str, add_special_tokens: bool = False) -> int:
         """Number of tokens. This is the unit chunk sizes are measured in."""
         return len(self.encode(text, add_special_tokens=add_special_tokens))
+    
+    def encode_with_offsets(self, text: str) -> tuple[list[int], list[tuple[int, int]]]:
+        """Token IDs plus the (char_start, char_end) of each token in `text`.
 
+        The offsets let a chunker cut the ORIGINAL text at token boundaries.
+        """
+        enc = self._tok(
+            text,
+            add_special_tokens=False,
+            return_offsets_mapping=True,
+            truncation=False,
+        )
+        return enc["input_ids"], [tuple(o) for o in enc["offset_mapping"]]
     @property
     def max_length(self) -> int:
         """Maximum sequence length the model accepts, INCLUDING special tokens."""
