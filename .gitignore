@@ -45,3 +45,5 @@ secrets.json
 .idea/
 Thumbs.db
 desktop.ini
+data/processed/*
+!data/processed/.gitkeep
