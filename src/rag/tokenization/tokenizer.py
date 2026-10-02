@@ -13,7 +13,9 @@ with a vocabulary learned once during the model's pretraining.
 
 from transformers import AutoTokenizer
 
-
+# Real limits, from each model's sentence_bert_config.json. The tokenizer's own
+# model_max_length can be larger than what the model was configured to embed.
+MODEL_MAX_LENGTH = {"sentence-transformers/all-MiniLM-L6-v2": 256}
 class Tokenizer:
     """Token counting and encoding for a specific model.
 
@@ -60,7 +62,7 @@ class Tokenizer:
     @property
     def max_length(self) -> int:
         """Maximum sequence length the model accepts, INCLUDING special tokens."""
-        return self._tok.model_max_length
+        return MODEL_MAX_LENGTH.get(self.model_name, self._tok.model_max_length)
 
     @property
     def content_budget(self) -> int:

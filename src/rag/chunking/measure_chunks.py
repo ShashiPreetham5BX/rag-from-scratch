@@ -9,7 +9,7 @@ from rag.loading.jsonl_loader import JSONLLoader
 from rag.preprocessing.pipelines import get_pipeline
 from rag.tokenization.tokenizer import Tokenizer
 
-SIZES = [64, 128, 256, 510]   # 510 = 512 minus the 2 special tokens
+SIZES = [64, 128, 254]   # 510 = 512 minus the 2 special tokens
 OVERLAP_FRACTION = 8          # overlap = size // 8  (12.5%)
 
 

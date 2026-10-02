@@ -15,20 +15,12 @@
     "avg_chunk_tokens": 110.4,
     "min_chunk_tokens": 17
   },
-  "256": {
-    "overlap": 32,
-    "total_chunks": 8994,
-    "chunks_per_doc": 1.74,
-    "pct_single_chunk_docs": 37.4,
-    "avg_chunk_tokens": 194.3,
-    "min_chunk_tokens": 33
-  },
-  "510": {
-    "overlap": 63,
-    "total_chunks": 5547,
-    "chunks_per_doc": 1.07,
-    "pct_single_chunk_docs": 93.3,
-    "avg_chunk_tokens": 297.2,
-    "min_chunk_tokens": 53
+  "254": {
+    "overlap": 31,
+    "total_chunks": 9046,
+    "chunks_per_doc": 1.75,
+    "pct_single_chunk_docs": 36.7,
+    "avg_chunk_tokens": 193.0,
+    "min_chunk_tokens": 32
   }
 }
